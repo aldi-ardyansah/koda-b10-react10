@@ -1,12 +1,9 @@
 import ToDoList from './pages/ToDoList.jsx';
 
-function App() {
-
+export default function App() {
   return (
     <>
       <ToDoList />
     </>
   )
 }
-
-export default App;
