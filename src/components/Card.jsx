@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
 import { RiCheckboxBlankCircleLine, RiCheckboxCircleFill } from "react-icons/ri";
-import data from "../data/data.json";
+import { useSelector, useDispatch } from "react-redux";
+import { toggleTask } from "../redux/slices/taskSlice.js";
 
 import { IoIosArrowBack } from "react-icons/io";
 import { MdOutlineIosShare } from "react-icons/md";
@@ -10,32 +10,12 @@ import { FiCamera } from "react-icons/fi";
 import { MdAttachFile } from "react-icons/md";
 import { HiOutlinePencilSquare } from "react-icons/hi2";
 
-function useLocalStorage(key, initialValue) {
-  const [value, setValue] = useState(() => {
-    try {
-      const storedValue = localStorage.getItem(key);
-      return storedValue !== null ? JSON.parse(storedValue) : initialValue;
-    } catch {
-      return initialValue;
-    }
-  });
-
-  useEffect(() => {
-    localStorage.setItem(key, JSON.stringify(value));
-  }, [key, value]);
-
-  return [value, setValue];
-}
-
 export default function Card() {
-  const [tasks, setTasks] = useLocalStorage("tasks", data.tasks);
+  const tasks = useSelector((state) => state.tasks);
+  const dispatch = useDispatch();
 
   const handleToggle = (id) => {
-    setTasks((prevTasks) =>
-      prevTasks.map((task) =>
-        task.id === id ? { ...task, completed: !task.completed } : task
-      )
-    );
+    dispatch(toggleTask(id));
   };
 
   return (
