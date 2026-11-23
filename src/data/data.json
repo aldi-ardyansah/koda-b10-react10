@@ -1,28 +1,28 @@
 {
-    "tasks": [
-        {
-        "id": 1,
-        "title": "Buy groceries",
-        "description": "Milk, Rice, Eggs, Tomato",
-        "completed": false
-        },
-        {
-        "id": 2,
-        "title": "Clean the house",
-        "description": "Vacuum, Dust, Mop",
-        "completed": true
-        },
-        {
-        "id": 3,
-        "title": "Finish project report",
-        "description": "Complete the final draft and submit it",
-        "completed": true
-        },
-        {
-        "id": 4,
-        "title": "Call wife",
-        "description": "Check in and see how she's doing",
-        "completed": false
-        }
-    ]
+  "tasks": [
+    {
+      "id": 1,
+      "title": "Buy groceries",
+      "description": "Milk, Rice, Eggs, Tomato",
+      "completed": false
+    },
+    {
+      "id": 2,
+      "title": "Clean the house",
+      "description": "Vacuum, Dust, Mop",
+      "completed": true
+    },
+    {
+      "id": 3,
+      "title": "Finish project report",
+      "description": "Complete the final draft and submit it",
+      "completed": true
+    },
+    {
+      "id": 4,
+      "title": "Call wife",
+      "description": "Check in and see how she's doing",
+      "completed": false
+    }
+  ]
 }

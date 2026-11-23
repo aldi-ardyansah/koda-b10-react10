@@ -40,7 +40,7 @@ export default function Card() {
               <RiCheckboxBlankCircleLine className="mt-1 shrink-0 text-gray-400" />
             )}
             <div>
-              <p className={`font-medium ${ task.completed ? "text-gray-400 line-through" : "text-gray-800"}`}>{task.title}</p>
+              <p className={`font-medium ${task.completed ? "text-gray-400 line-through" : "text-gray-800"}`}>{task.title}</p>
               <p className="text-sm text-gray-500">{task.description}</p>
             </div>
           </div>
